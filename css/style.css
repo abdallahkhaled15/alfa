@@ -11,6 +11,14 @@ a:hover{
     height: 13rem !important;
     width: auto;
 }
+.home:hover{
+    color: black;
+    background-color: #cfcfcf !important;
+    transition: 1s all ease-in-out;
+}
+.home{
+    height:3rem !important;
+}
 .h33:hover{
 color: rgb(56, 51, 51);
 }
