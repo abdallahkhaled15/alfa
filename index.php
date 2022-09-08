@@ -6,16 +6,16 @@ include ("conn.php");
 include ("owl.php");
 if (isset($_POST['submit'])) {
  if (isset($_SESSION['cart'])) {
-   $item_array_id = array_column($_SESSION['cart'], "product_id");
-   $item_array_name = array_column($_SESSION['cart'], "name");
-    if (in_array($_POST['product_id'],$item_array_id)) {
-        echo "<script>alert('Product is already added in the cart..!')</script>";
-
-    }else {
+     if (in_array($_POST['product_id'],$item_array_id)) {
+         echo "<script>alert('Product is already added in the cart..!')</script>";
+         
+        }else {
+        $item_array_id = array_column($_SESSION['cart'], "product_id");
+        $item_array_name = array_column($_SESSION['cart'], "name");
         $count = count($_SESSION['cart']);
         $item_array = array(
         'id' => $_POST['product_id'],
-        'name' => $_POST['name']);
+        'numb'=>1);
         $_SESSION['cart'][$count] = $item_array;
     }
  }else {

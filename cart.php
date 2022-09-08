@@ -34,7 +34,15 @@ if (isset($_POST['remove'])){
     <title>Shopping Cart</title>
     <?php echo $footstyle; ?>
 <script>
-    $(document).ready(function(){
+   //  $(document).ready(function(){
+   //    $(".plus").on('click'()=>{$('.countnum').val(parseInt($('.count').val()) + 1 );})
+   //    $(".minus").on('click'()=>{
+   //       if ($('.count').val(parseInt($('.count').val()))=1) {
+   //          return 0;
+   //       }else{
+   //          $('.count').val(parseInt($('.count').val()) - 1 );
+   //       }
+   //    })
         $('.count').prop('disabled', true);
           $(document).on('click','.plus',function(){
           $('.count').val(parseInt($('.count').val()) + 1 );
@@ -43,9 +51,9 @@ if (isset($_POST['remove'])){
            $('.count').val(parseInt($('.count').val()) - 1 );
               if ($('.count').val() == 0) {
                 $('.count').val(1);
+                
              }
             });
-     });
 </script>
 <style>.qty .count {
     color: #000;
